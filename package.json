@@ -5,12 +5,34 @@
   "main": "Bot.js",
   "scripts": {
     "run": "node Bot.js",
+    "dev": "babel-node Bot.js",
     "test": "test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.2.1",
+    "lodash": "^4.17.4",
     "node-fetch": "^1.7.3"
+  },
+  "babel": {
+    "presets": [
+      "stage-3",
+      [
+        "env",
+        {
+          "targets": {
+            "node": "8.4"
+          }
+        }
+      ],
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1"
   }
 }
